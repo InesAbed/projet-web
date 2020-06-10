@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AdoptLife</title>
+
+</head>
+
+<body>
+
+	<div id="header"></div>
+
+	<div class="landingImage">
+		<div class="backgroundColor" >
+			<h1>AdoptLife</h1>
+			<div class="cutResponsive">
+				<h2>Adoption</h2>
+				<h2>animal</h2>
+			</div>
+		</div>
+	</div>
+
+	<div class="accueil" >
+		<p>Bienvenu sur AdoptLife</p>
+		<p>Ce site est spécialisé autour du sujet de l'adoption animalière</p>
+	</div>
+
+	<div class="textLeft" >
+		<div class="textLeftTextZoneBackground" >
+			<div class="textLeftTextZoneSpace">
+				<p>Information</p>
+				<P>Notre page "en savoir plus" dispose d'un grand nombre de blog</p>
+				<p>Vous pouvez trouver de nombreuses informations vis a vis de l'adoption</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="textRight" >
+		<div class="textRightTextZoneBackground" >
+			<div class="textRightTextZoneSpace">
+				<p>Adoption en ligne</p>
+				<p>Nous fournissons une page "a vous de jouez" permettant l'adoption en ligne</p>
+				<p>Ce service utilise <a href="https://www.petfinder.com/">Petfinder</a>, il n'est donc disponible qu'en Amérique du nord pour le moment</p>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="footer"></div>
+
+</body>
+
+<script type="text/javascript" src="./tools/loadHeadFooter.js"></script>
+<script type="text/javascript" src="./components/header.js"></script>
+<script type="text/javascript" src="./components/footer.js"></script>
+
+<script type="text/javascript">
+
+
+	loadHeader('./components/header.html').then(e => setActiveHeader()).catch(e => console.log(e));
+	loadFooter('./components/footer.html').catch(e => console.log(e));
+
+</script>
+
+
+ <link rel="stylesheet" type="text/css"  href="/index.css">
+
+</html>

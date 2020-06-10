@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AdoptLife</title>
+
+</head>
+
+<body>
+
+	<div id="header"></div>
+
+	<p>page</p>
+
+	<div id="footer"></div>
+
+</body>
+
+<script type="text/javascript" src="/tools/loadHeadFooter.js"></script>
+<script type="text/javascript" src="/components/header.js"></script>
+<script type="text/javascript" src="./components/footer.js"></script>
+
+<script type="text/javascript">
+
+	fetch('/articles.json').then(async (res) => {
+		let articles = await res.json();
+		console.log(articles);
+	}).catch(e => console.error(e));
+
+	loadHeader('./components/header.html').then(e => setActiveHeader()).catch(e => console.log(e));
+	loadFooter('./components/footer.html').catch(e => console.log(e));
+
+</script>
+
+ <link rel="stylesheet" type="text/css"  href="/index.css">
+
+</html>

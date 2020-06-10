@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AdoptLife</title>
+
+</head>
+
+<body>
+
+	<div id="header"></div>
+
+	<h1 style="text-align: center; margin-top: 8vh; padding-bottom: 2vh" >Blog</h1>
+
+	<div id="content"></div>
+
+	<div id="footer"></div>
+
+</body>
+
+<script type="text/javascript" src="/tools/loadHeadFooter.js"></script>
+<script type="text/javascript" src="/components/header.js"></script>
+<script type="text/javascript" src="./components/footer.js"></script>
+<script type="text/javascript" src="/components/article.js"></script>
+
+<script type="text/javascript">
+
+	fetch('/articles.json').then(async (res) => {
+		const articles = await res.json();
+		const html = htmlArticlesArray(articles);
+		document.getElementById("content").innerHTML = html;
+	}).catch(e => console.error(e));
+
+	loadHeader('./components/header.html').then(e => setActiveHeader()).catch(e => console.log(e));
+	loadFooter('./components/footer.html').catch(e => console.log(e));
+
+</script>
+
+<link rel="stylesheet" type="text/css"  href="/index.css">
+
+<style type="text/css">
+
+	html, body {
+		max-width: 100% !important;
+		overflow-x: hidden !important;
+	}
+
+	#content {
+		min-height: 80vh;
+	}
+
+	.article_line {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin-bottom: 1vh;
+	}
+
+	.article {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		width: 20vw;
+		border: 1px solid rgba(22,22,22,0.1);
+		padding:20px;
+	}
+
+	.article_line .article:hover {
+		cursor: pointer;
+		border: 2px solid rgb(136, 49, 183);
+	}
+
+	.article img {
+		width: 20vw;
+	}
+
+	.imgContainer {
+		height:20vh;
+		width: 20vw;
+		overflow: hidden;
+	}
+
+	@media screen and (max-width: 600px) {
+		.article {
+			width: 40vw;
+			padding: 10px;
+		}
+		.article img {
+			width: 40vw;
+		}
+
+		.imgContainer {
+			height:20vh;
+			width: 40vw;
+			overflow: hidden;
+		}
+	}
+
+</style>
+
+</html>
