@@ -10,7 +10,18 @@
 
 	<div id="header"></div>
 
-	<p>page</p>
+	<div class="mainContent">
+		<div class="peopleContainer">
+			<img src="/ines.jpg" alt="ines" >
+			<p>Je m'appel Ines, j'aime développer des sites</p>
+			<p>Nous avons créé ce site pour aider les gens qui souhaitent adopter des animaux</p>
+		</div>
+		<div class="peopleContainer">
+			<img src="/safia.png" alt="safia" >
+			<p>Je m'appel Safia, j'aime développer des sites</p>
+			<p>Nous avons créé ce site pour aider les gens qui souhaitent adopter des animaux</p>
+		</div>
+	</div>
 
 	<div id="footer"></div>
 
@@ -33,5 +44,30 @@
 </script>
 
  <link rel="stylesheet" type="text/css"  href="/index.css">
+
+ <style type="text/css">
+
+ 	.mainContent {
+ 		height:100vh;
+ 		display: flex;
+ 		flex-direction: row;
+ 		align-items: center;
+ 		justify-content: space-around;
+ 	}
+
+ 	.peopleContainer {
+ 		display: flex;
+ 		flex-direction: column;
+ 		align-items: center;
+ 		justify-content: center;
+ 	}
+
+ 	.peopleContainer img {
+ 		height: 20vh;
+ 		width: auto;
+ 		border-radius: 50%;
+ 	}
+
+ </style>
 
 </html>

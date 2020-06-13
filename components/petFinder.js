@@ -78,9 +78,9 @@ function renderAnimals(animal) {
 	return (`
 		<div class="tableLine" onclick="goTo('${animal.url}')" >
 			<div class="tableCell">${animal.photos && animal.photos[0] ?
-				`<img src=${animal.photos[0].small} style="height:10vw" >`
+				`<img src=${animal.photos[0].small} style="height:9vw" >`
 				:
-				`<img src="/photo-manquante.jpg" style="height:10vw" >`
+				`<img src="/photo-manquante.jpg" style="height:9vw" >`
 			}</div>
 			<div class="tableCell">${animal.species}</div>
 			<div class="tableCell">${animal.breeds.primary ? animal.breeds.primary : 'NA' }${animal.breeds.secondary ? ` / ${animal.breeds.secondary}` : ''}</div>
