@@ -1,6 +1,11 @@
+@font-face {
+	font-family: Montserrat;
+	src: url(./fonts/Montserrat-Regular.ttf);
+}
+
 body {
 	margin: 0;
-	font:arial;
+	font-family: Montserrat;
 }
 
 html, body {
@@ -34,6 +39,10 @@ html, body {
 	background-color: rgba(0,0,0,0.5);
 }
 
+.landingImage img {
+	width: 25vw;
+	margin-top: 15vh;
+}
 
 .landingImage h1 {
 	font-size: 64px;
@@ -57,6 +66,10 @@ html, body {
 }
 
 @media screen and (max-width: 600px) {
+	.landingImage img {
+		width: 50vw;
+	}
+
 	.cutResponsive {
 		display: flex;
 		flex-direction: column;
@@ -98,7 +111,6 @@ html, body {
 }
 
 .textLeftTextZoneBackground {
-	height: 25vh;
 	flex-wrap: wrap;
 	display: flex;
 	width: 96vw;
@@ -116,6 +128,10 @@ html, body {
 	text-align: center;
 }
 
+.textLeftTextZoneSpace h1 {
+	color: rgb(136, 49, 183);
+}
+
 .textRight {
 	flex-wrap: wrap;
 	display: flex;
@@ -131,7 +147,6 @@ html, body {
 }
 
 .textRightTextZoneBackground {
-	height: 25vh;
 	flex-wrap: wrap;
 	display: flex;
 	width: 98vw;
@@ -147,6 +162,10 @@ html, body {
 .textRightTextZoneSpace {
 	width: 30vw;
 	text-align: center;
+}
+
+.textRightTextZoneSpace h1 {
+	color: rgb(136, 49, 183);
 }
 
 @media screen and (max-width: 600px) {
@@ -171,4 +190,13 @@ html, body {
 	.textRightTextZoneSpace {
 		width: 100vw;
 	}
+}
+
+.contentCut {
+	width: 50%;
+	height: 1px;
+	background-color: #aaa;
+	border: 2px solid #ddd;
+	box-shadow: 5px 5px 5px #ddd;
+	margin:2vh;
 }
